@@ -14,6 +14,7 @@ class JSONObject {
 	JSONObject(string);
 	string toString(int) const;
 public:
+	static JSONObject parseFromString(string);
 	void put(string, JSONObject);
 	void put(string, string);
 	string toString();
@@ -26,6 +27,10 @@ JSONObject::JSONObject() {
 JSONObject::JSONObject(string val) {
 	this->isSimple = true;
 	this->val = val;
+}
+
+void JSONObject::parseFromString(string json) {
+	
 }
 
 void JSONObject::put(string key, JSONObject val) {
